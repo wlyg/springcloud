@@ -13,10 +13,11 @@ public class UserController {
 
 	@RequestMapping("/user")
 	public List<User> getUsers(){
-		List<User> list = new ArrayList<>();
-		list.add(new User(1,"zhangsan",20));
-		list.add(new User(2,"lisi",22));
-		list.add(new User(3,"wangwu",20));
+		List list = new ArrayList<>();
+		list.add("user1");
+		list.add("user2");
+		list.add("user3");
+
 		return list;
 	}
 }

@@ -1,37 +1,66 @@
 package com.booting.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="user")
 public class User {
 
-	private int userid;
-	private String username;
-	private int userage;
-	public int getUserid() {
-		return userid;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
+	private Integer id;
+	
+	@Column(name="name")
+	private String name;
+	
+	@Column(name="age")
+	private Integer age;
+	
+	@Column(name="address")
+	private String address;
+
+	public Integer getId() {
+		return id;
 	}
-	public void setUserid(int userid) {
-		this.userid = userid;
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
-	public String getUsername() {
-		return username;
+
+	public String getName() {
+		return name;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public int getUserage() {
-		return userage;
+
+	public Integer getAge() {
+		return age;
 	}
-	public void setUserage(int userage) {
-		this.userage = userage;
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
-	public User(int userid, String username, int userage) {
-		super();
-		this.userid = userid;
-		this.username = username;
-		this.userage = userage;
+
+	public String getAddress() {
+		return address;
 	}
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
+
+	@Override
+	public String toString() {
+		return "Users [id=" + id + ", name=" + name + ", age=" + age + ", address=" + address + "]";
+	}
+	
 	
 }

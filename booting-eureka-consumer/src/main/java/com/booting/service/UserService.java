@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.booting.feign.UserFeignClient;
 import com.booting.pojo.User;
 
 @Service
@@ -18,6 +19,9 @@ public class UserService {
 
 	@Autowired
 	private LoadBalancerClient loadBalancerClient;//ribbon负载均衡器
+	
+	@Autowired
+	private UserFeignClient userFeignClient;
 	
 	public List<User> getUsers(){
 			//选择调用的服务的名称
@@ -38,5 +42,10 @@ public class UserService {
 		ResponseEntity<List<User>> response = rt.exchange(sb.toString(),HttpMethod.GET, null, type);
 		List<User> list =response.getBody();
 		return list;
+	}
+	
+	// Feign声明式调用
+	public List<User> getUser(){
+		return this.userFeignClient.getUser();
 	}
 }

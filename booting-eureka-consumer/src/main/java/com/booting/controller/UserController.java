@@ -18,6 +18,7 @@ public class UserController {
 	
 	@RequestMapping("/consumer")
 	public List<User> getUsers(){
-		return this.userService.getUsers();
+//		return this.userService.getUsers();
+		return this.userService.getUser();
 	}
 }

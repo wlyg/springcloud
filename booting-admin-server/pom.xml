@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.booting</groupId>
-	<artifactId>booting-eureka-server</artifactId>
+	<artifactId>booting-admin-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>booting-eureka-server</name>
-	<description>Eureka server</description>
+	<name>booting-admin-server</name>
+	<description>Booting admin server</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

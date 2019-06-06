@@ -4,17 +4,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.booting</groupId>
-	<artifactId>booting-eureka-consumer</artifactId>
+	<artifactId>booting-eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>booting-eureka-consumer</name>
-	<description>Eureka consumer</description>
+	<name>booting-eureka-server</name>
+	<description>Eureka server</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.13.RELEASE</version>
+		<version>1.5.10.RELEASE</version>
 		<relativePath />
 	</parent>
 
@@ -29,7 +29,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Dalston.SR5</version>
+				<version>Edgware.SR2</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -37,29 +37,8 @@
 	</dependencyManagement>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<artifactId>spring-boot-admin-starter-server</artifactId>
 			<version>1.5.7</version>
 		</dependency>
 	</dependencies>

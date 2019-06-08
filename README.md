@@ -1,1 +1,1 @@
-# booting
+# mvn spring-boot:run
